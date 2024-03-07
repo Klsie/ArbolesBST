@@ -1,24 +1,23 @@
 package arbol;
+import java.util.Random;
 
 public class main {
     public static void main(String[] args) {
-        Arbol arbol = new Arbol(15, 0);
-        arbol.insertar(arbol, 12);
-        arbol.insertar(arbol, 4);
-        arbol.insertar(arbol, 42);
-        arbol.insertar(arbol, 3);
-        arbol.insertar(arbol, 76);
-        arbol.insertar(arbol, 411);
+        Arbol arbol = new Arbol(20, 0);
+        Random rand = new Random();
+
+        // Insertar 15 números aleatorios en el rango de 1 a 100
+        for (int i = 0; i < 15; i++) {
+            int numeroAleatorio = rand.nextInt(100) + 1;
+            arbol.insertar(arbol, numeroAleatorio);
+        }
 
         System.out.println("Forma del árbol:");
         arbol.imprimirArbol(arbol);
-
         System.out.println("Preorder----------------------------");
         arbol.preorden(arbol);
-
         System.out.println("PostOrder----------------------------");
         arbol.postorden(arbol);
-
         System.out.println("Inorder----------------------------");
         arbol.inorden(arbol);
     }
