@@ -1,3 +1,4 @@
+//ERAM 22310401
 package arbol;
 import java.util.Random;
 
@@ -6,7 +7,6 @@ public class main {
         Arbol arbol = new Arbol(20, 0);
         Random rand = new Random();
 
-        // Insertar 15 números aleatorios en el rango de 1 a 100
         for (int i = 0; i < 15; i++) {
             int numeroAleatorio = rand.nextInt(100) + 1;
             arbol.insertar(arbol, numeroAleatorio);
